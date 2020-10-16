@@ -243,8 +243,8 @@ func (c *Client) getBalance(address string, ignoreReserve bool, reserveAmount in
 	if err != nil {
 		return nil, err
 	}
-
-	if r.Get("error").String() == "actMalformed" {
+    //r.Get("error").String() == "actMalformed" || r.Get("error").String() == "actNotFound"
+	if r.Get("status").String() != "success" {
 		return &AddrBalance{Address: address, Balance: big.NewInt(0), Actived: false}, nil
 	}
 
