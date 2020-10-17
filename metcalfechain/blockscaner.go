@@ -399,7 +399,7 @@ func (bs *MBlockScanner) BatchExtractTransaction(blockHeight uint64, blockHash s
 	)
 
 	if len(txs) == 0 {
-		return errors.New("BatchExtractTransaction block is nil.")
+		return nil
 	}
 
 	//生产通道
