@@ -1,9 +1,9 @@
 package openwtester
 
 import (
+	"github.com/blocktree/metcalfechain-adapter/metcalfechain"
 	"github.com/blocktree/openwallet/v2/log"
 	"github.com/blocktree/openwallet/v2/openw"
-	"github.com/blocktree/metcalfechain-adapter/metcalfechain"
 )
 
 func init() {

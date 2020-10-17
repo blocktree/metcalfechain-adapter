@@ -128,6 +128,7 @@ func (bs *MBlockScanner) ScanBlockTask() {
 			break
 		}
 
+		fmt.Println("------[M_block_scan]:    currentHeight: ", currentHeight, "maxHeight: ",maxHeight)
 		//是否已到最新高度
 		if currentHeight >= maxHeight {
 			bs.wm.Log.Std.Info("block scanner has scanned full chain data. Current height: %d", maxHeight)
