@@ -106,7 +106,7 @@ func (wm *WalletManager) Decimal() int32 {
 }
 
 //AddressDecode 地址解析器
-func (wm *WalletManager) GetAddressDecode() openwallet.AddressDecoder {
+func (wm *WalletManager) GetAddressDecoderV2() openwallet.AddressDecoderV2 {
 	return wm.Decoder
 }
 
