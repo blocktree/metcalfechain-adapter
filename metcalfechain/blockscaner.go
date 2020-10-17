@@ -383,6 +383,8 @@ func (bs *MBlockScanner) RescanFailedRecord() {
 //newBlockNotify 获得新区块后，通知给观测者
 func (bs *MBlockScanner) newBlockNotify(block *Block, isFork bool) {
 	header := block.BlockHeader()
+
+	fmt.Println("M_block_scanner : " + "header.Hash:" + header.Hash + " header.Height:" , header.Height)
 	header.Fork = isFork
 	bs.NewBlockNotify(header)
 }
